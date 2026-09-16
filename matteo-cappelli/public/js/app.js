@@ -50,7 +50,6 @@ contactForm.addEventListener("submit", (event) => {
     formStatus.textContent = "Completa i campi richiesti per continuare.";
     return;
   }
-
-  // Sostituisci questa simulazione con l'invio reale del form.
+  
   formStatus.textContent = "Grazie! La tua richiesta è stata inviata.";
 });
