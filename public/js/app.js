@@ -42,7 +42,7 @@ navigation.querySelectorAll("a").forEach((link) => {
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 
-contactForm.addEventListener("submit", async (event) => {
+/*contactForm.addEventListener("submit", async (event) => {
 	event.preventDefault();
 
 	if (!contactForm.checkValidity()) {
@@ -72,4 +72,4 @@ contactForm.addEventListener("submit", async (event) => {
 	} catch (error) {
 		formStatus.textContent = "Errore di connessione. Controlla la rete e riprova.";
 	}
-});
+});*/
