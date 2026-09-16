@@ -52,4 +52,5 @@ contactForm.addEventListener("submit", (event) => {
   }
 
   formStatus.textContent = "Grazie! La tua richiesta è stata inviata.";
+  contactForm.reset();
 });
