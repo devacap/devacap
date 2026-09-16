@@ -42,7 +42,7 @@ navigation.querySelectorAll("a").forEach((link) => {
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = document.querySelector("[data-form-status]");
 
-/*contactForm.addEventListener("submit", async (event) => {
+contactForm.addEventListener("submit", async (event) => {
 	event.preventDefault();
 
 	if (!contactForm.checkValidity()) {
@@ -54,22 +54,23 @@ const formStatus = document.querySelector("[data-form-status]");
 	formStatus.textContent = "Invio in corso...";
 
 	try {
-		const formData = new FormData(contactForm);
 		const response = await fetch(contactForm.action, {
-			method: contactForm.method,
-			body: formData,
+			method: "POST",
+			body: new FormData(contactForm),
 			headers: {
 				'Accept': 'application/json'
 			}
 		});
 
-		if (response.ok) {
+		const json = await response.json();
+
+		if (response.status === 200) {
 			formStatus.textContent = "Grazie! La tua richiesta è stata inviata.";
 			contactForm.reset();
 		} else {
-			formStatus.textContent = "Ops! C'è stato un problema con l'invio. Riprova.";
+			formStatus.textContent = json.message || "Ops! C'è stato un problema. Riprova.";
 		}
 	} catch (error) {
 		formStatus.textContent = "Errore di connessione. Controlla la rete e riprova.";
 	}
-});*/
+});
