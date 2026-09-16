@@ -580,7 +580,7 @@ h1 span { color: transparent; -webkit-text-stroke: 1.5px var(--ink); }
   .header-socials { justify-content: flex-start; }
   .hero { min-height: auto; padding: 80px 8px 85px; }
   h1 { font-size: clamp(3.8rem, 19vw, 6rem); }
-  .hero-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
+  .hero-actions { align-items: flex-start; gap: 14px; }
   .hero-visual { width: 86%; max-width: 350px; }
   .section-block { padding: 84px 8px; }
   .section-heading { grid-template-columns: 1fr; margin-bottom: 46px; }
